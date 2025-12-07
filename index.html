@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Стратегия благополучия | Предвыборная программа 2025</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #1a5f7a;
+            --light-blue: #2a8bb3;
+            --accent-blue: #57c1e8;
+            --white: #ffffff;
+            --light-gray: #f5f9fc;
+            --medium-gray: #e8f1f7;
+            --dark-gray: #333333;
+            --text-gray: #555555;
+            --shadow: 0 4px 12px rgba(26, 95, 122, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            color: var(--primary-blue);
+            font-size: 28px;
+        }
+
+        .logo-text {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--primary-blue);
+        }
+
+        .logo-subtitle {
+            font-size: 12px;
+            color: var(--light-blue);
+            margin-top: -5px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 500;
+            font-size: 16px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--primary-blue);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-blue);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--primary-blue);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 95, 122, 0.9), rgba(42, 139, 179, 0.9));
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400"><rect width="1200" height="400" fill="%231a5f7a"/><path d="M0,200 Q300,100 600,200 T1200,200 L1200,400 L0,400 Z" fill="%232a8bb3" opacity="0.7"/><path d="M0,250 Q300,150 600,250 T1200,250 L1200,400 L0,400 Z" fill="%2357c1e8" opacity="0.5"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .slogan {
+            font-size: 20px;
+            font-weight: 300;
+            font-style: italic;
+            margin-top: 25px;
+            padding: 15px 30px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            display: inline-block;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Main Content */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent-blue);
+            border-radius: 2px;
+        }
+
+        .manifesto-text {
+            background-color: var(--light-gray);
+            padding: 50px;
+            border-radius: 12px;
+            margin-bottom: 60px;
+            box-shadow: var(--shadow);
+        }
+
+        .manifesto-text p {
+            margin-bottom: 20px;
+            font-size: 18px;
+            line-height: 1.7;
+            color: var(--text-gray);
+        }
+
+        .manifesto-text .intro {
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--primary-blue);
+            margin-bottom: 30px;
+        }
+
+        /* Image Banner */
+        .image-banner {
+            margin: 40px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .banner-1 {
+            background-image: url('https://img.freepik.com/free-vector/happy-diverse-people-holding-hands-together_53876-105506.jpg?w=1200&t=st=1700000000~exp=1700000600~hmac=xxxxxxxx');
+            background-color: #e8f1f7;
+        }
+
+        .banner-2 {
+            background-image: url('https://img.freepik.com/free-vector/flat-people-asking-questions-illustration_23-2148917151.jpg?w=1200&t=st=1700000000~exp=1700000600~hmac=xxxxxxxx');
+            background-color: #d4e7f2;
+        }
+
+        .banner-3 {
+            background-image: url('https://img.freepik.com/free-vector/hand-drawn-ecological-concept_52683-66642.jpg?w=1200&t=st=1700000000~exp=1700000600~hmac=xxxxxxxx');
+            background-color: #c2ddec;
+        }
+
+        .banner-fallback {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100%;
+            background: linear-gradient(135deg, var(--light-blue) 0%, var(--accent-blue) 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .banner-fallback i {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .banner-fallback h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        /* Timeline */
+        .timeline-section {
+            background-color: var(--light-gray);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background-color: var(--accent-blue);
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            justify-content: flex-end;
+            padding-right: calc(50% + 30px);
+        }
+
+        .timeline-item:nth-child(even) {
+            justify-content: flex-start;
+            padding-left: calc(50% + 30px);
+        }
+
+        .timeline-content {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            width: 100%;
+            max-width: 400px;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(26, 95, 122, 0.15);
+        }
+
+        .timeline-year {
+            position: absolute;
+            top: -25px;
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 18px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-year {
+            right: -20px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-year {
+            left: -20px;
+        }
+
+        .timeline-content h3 {
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .timeline-content ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .timeline-content li {
+            margin-bottom: 8px;
+            color: var(--text-gray);
+        }
+
+        .timeline-result {
+            background-color: var(--medium-gray);
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            border-left: 4px solid var(--accent-blue);
+        }
+
+        .timeline-result strong {
+            color: var(--primary-blue);
+        }
+
+        /* Philosophy Section */
+        .philosophy-text {
+            font-size: 20px;
+            line-height: 1.8;
+            color: var(--text-gray);
+            max-width: 900px;
+            margin: 0 auto 50px;
+            text-align: center;
+        }
+
+        .philosophy-text p {
+            margin-bottom: 25px;
+        }
+
+        /* Telegram CTA */
+        .telegram-cta {
+            background-color: var(--light-gray);
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 40px 0;
+            box-shadow: var(--shadow);
+        }
+
+        .telegram-cta h3 {
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .telegram-cta p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            color: var(--text-gray);
+        }
+
+        .tg-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #0088cc;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: var(--transition);
+        }
+
+        .tg-btn:hover {
+            background-color: #0077b5;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 136, 204, 0.3);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--light-blue) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 70px 0;
+        }
+
+        .cta-title {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .cta-subtitle {
+            font-size: 20px;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 18px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--white);
+            color: var(--primary-blue);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--light-gray);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-gray);
+            color: var(--white);
+            padding: 50px 0 30px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            flex: 0 0 300px;
+        }
+
+        .footer-logo .logo-text {
+            color: var(--white);
+            margin-bottom: 10px;
+        }
+
+        .footer-logo p {
+            color: #aaa;
+            font-size: 16px;
+        }
+
+        .footer-contact {
+            flex: 0 0 300px;
+        }
+
+        .footer-contact h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            color: #aaa;
+        }
+
+        .contact-icon {
+            margin-right: 12px;
+            color: var(--accent-blue);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #444;
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero-subtitle {
+                font-size: 20px;
+            }
+            
+            .section-title {
+                font-size: 32px;
+            }
+            
+            .timeline::before {
+                left: 30px;
+            }
+            
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                justify-content: flex-start;
+                padding-left: 60px;
+                padding-right: 0;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-year,
+            .timeline-item:nth-child(even) .timeline-year {
+                left: 0;
+                right: auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--white);
+                box-shadow: var(--shadow);
+                padding: 20px;
+            }
+            
+            nav.active {
+                display: block;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero {
+                padding: 70px 0;
+            }
+            
+            .hero h1 {
+                font-size: 28px;
+            }
+            
+            .hero-subtitle {
+                font-size: 18px;
+            }
+            
+            .slogan {
+                font-size: 18px;
+            }
+            
+            .section {
+                padding: 60px 0;
+            }
+            
+            .manifesto-text {
+                padding: 30px;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .image-banner {
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 24px;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+            
+            .timeline-content {
+                padding: 20px;
+            }
+            
+            .timeline-content h3 {
+                font-size: 20px;
+            }
+            
+            .tg-btn {
+                padding: 12px 20px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div>
+                    <div class="logo-text">Стратегия благополучия</div>
+                    <div class="logo-subtitle">Выборы 2025</div>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#program">Программа</a></li>
+                    <li><a href="#manifesto">Манифест</a></li>
+                    <li><a href="#timeline">Контракт</a></li>
+                    <li><a href="#contact">Присоединиться</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Достойная жизнь — инвестиция в мир и здоровье</h1>
+            <div class="hero-subtitle">Предвыборная программа партии «Стратегия благополучия»</div>
+            <div class="slogan">Наши цели — ваши потребности!</div>
+        </div>
+    </section>
+
+    <!-- Image Banner 1 -->
+    <div class="container">
+        <div class="image-banner banner-1">
+            <!-- Fallback content if image doesn't load -->
+            <div class="banner-fallback" id="banner1-fallback">
+                <i class="fas fa-users"></i>
+                <h3>Единство народа</h3>
+                <p>Вместе мы построим благополучное будущее</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Manifesto Section -->
+    <section class="section" id="manifesto">
+        <div class="container">
+            <h2 class="section-title">Наш манифест</h2>
+            <div class="manifesto-text">
+                <p class="intro">Уважаемые соотечественники!</p>
+                <p>Сегодня, в 2025 году, наша страна стоит на пороге исторического выбора. Мы можем продолжать жить в условиях постоянного напряжения, где благополучие граждан откладывается «на потом». Или мы можем выбрать другой путь — путь, где сила государства измеряется не масштабами вооружений, а качеством жизни его граждан, их здоровьем и знаниями, где безопасность строится на дипломатии и экономическом суверенитете, а не на страхе.</p>
+                <p>Партия «Стратегия благополучия» предлагает вам Контракт с Будущим — четкий, понятный и выполнимый план перезагрузки страны. Мы переводим ресурсы из сферы внешней конфронтации во внутреннее развитие. Наша главная цель — ЗДОРОВЬЕ, ОБРАЗОВАНИЕ И ДОСТОЙНАЯ ЖИЗНЬ КАЖДОЙ РОССИЙСКОЙ СЕМЬИ.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Banner 2 -->
+    <div class="container">
+        <div class="image-banner banner-2">
+            <div class="banner-fallback" id="banner2-fallback">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>Образование будущего</h3>
+                <p>Инвестиции в знания - инвестиции в будущее</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Timeline Section -->
+    <section class="section timeline-section" id="timeline">
+        <div class="container">
+            <h2 class="section-title">Наш контракт с будущим: от стабильности к процветанию</h2>
+            <p style="text-align: center; margin-bottom: 50px; font-size: 18px; max-width: 800px; margin-left: auto; margin-right: auto; color: var(--text-gray);">
+                Мы берем на себя конкретные обязательства с четкими сроками. Это наш план на ближайшие 15 лет.
+            </p>
+            
+            <div class="timeline">
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2026</div>
+                        <h3>Безопасность через дипломатию и разум</h3>
+                        <ul>
+                            <li>Снизим затраты на армию на 15%, перенаправив средства в гражданский сектор.</li>
+                            <li>Запустим масштабную дипломатическую инициативу «Мирный щит» для деэскалации международной напряженности и предотвращения новых конфликтов.</li>
+                        </ul>
+                        <div class="timeline-result">
+                            <strong>Итог:</strong> Сильная, современная, высокотехнологичная армия, освобожденная от коррупции и избыточных расходов. Безопасность через разум и диалог.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2027</div>
+                        <h3>Социальный щит — основа доверия</h3>
+                        <ul>
+                            <li>Увеличим Федеральный список социально значимых продуктов в 1,5 раза, включив в него детское питание, основные лекарства и товары первой необходимости.</li>
+                            <li>Введем жесткий государственный контроль над ценами на эти товары.</li>
+                        </ul>
+                        <div class="timeline-result">
+                            <strong>Итог:</strong> Защита кошелька каждой семьи, особенно многодетной, молодой и пенсионеров.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2029</div>
+                        <h3>Экология как наследие</h3>
+                        <ul>
+                            <li>Примем Закон «О неприкосновенности городских „легких“», который полностью пресечет любые попытки застройки парков, скверов и рекреационных зон.</li>
+                            <li>Запустим федеральную программу по созданию 500 новых парков и скверов в малых городах.</li>
+                        </ul>
+                        <div class="timeline-result">
+                            <strong>Итог:</strong> Ваш двор, ваш парк, ваше место отдыха — под защитой государства.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2030</div>
+                        <h3>Жильё — право, а не роскошь</h3>
+                        <ul>
+                            <li>Реализуем программу «Доступная квартира», которая через массовое строительство, льготную ипотеку для молодых семей и борьбу со спекуляциями обязательно приведет к снижению средних цен на квартиры в новостройках в 2 раза.</li>
+                        </ul>
+                        <div class="timeline-result">
+                            <strong>Итог:</strong> Молодая семья сможет купить жилье, не влезая в кабалу на 30 лет.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 5 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2032</div>
+                        <h3>Здоровая нация — сильная страна</h3>
+                        <ul>
+                            <li>Запустим Национальную программу «Поликлиника нового поколения». Капитальный ремонт, современное оборудование, достойные зарплаты персоналу, переход на электронные записи без очередей.</li>
+                            <li>Улучшим поликлиники так, чтобы визит к врачу перестал быть испытанием, а стал нормой качественной жизни.</li>
+                        </ul>
+                        <div class="timeline-result">
+                            <strong>Итог:</strong> Медицина, которой можно доверять, в шаговой доступности от дома.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 6 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2035</div>
+                        <h3>Образование — наш главный капитал</h3>
+                        <ul>
+                            <li>Реализуем программу «Школа будущего»: ремонт зданий, цифровизация, повышение статуса и доходов учителя.</li>
+                            <li>Улучшим школы, образование и увеличим количество бюджетных мест в вузах на 30%, сделав высшее образование по-настоящему доступным для талантливой молодежи из любых регионов.</li>
+                        </ul>
+                        <div class="timeline-result">
+                            <strong>Итог:</strong> Равные возможности для всех детей. Знания как социальный лифт, который работает.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 7 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2040</div>
+                        <h3>Лидерство нового типа</h3>
+                        <ul>
+                            <li>Наша долгосрочная цель — сделать Россию лидером мировой экономики не за счет сырья, а за счет «экономики разума»: высоких технологий, наукоемкого производства, IT-экспорта, зеленой энергетики и продовольственной безопасности.</li>
+                        </ul>
+                        <div class="timeline-result">
+                            <strong>Итог:</strong> Страна, которой гордятся, уважают и с которой хотят сотрудничать. Страна здоровых и образованных людей.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Telegram CTA -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="telegram-cta">
+                <h3>Присоединяйтесь к нашему Telegram-каналу!</h3>
+                <p>Будьте в курсе новостей партии, участвуйте в обсуждениях и следите за нашим продвижением к целям</p>
+                <a href="https://t.me/prosperity_strategy" target="_blank" class="tg-btn">
+                    <i class="fab fa-telegram"></i> Подписаться на канал
+                </a>
+                <p style="margin-top: 15px; font-size: 14px; color: #777;">
+                    Ссылка: https://t.me/prosperity_strategy
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="section" id="program">
+        <div class="container">
+            <h2 class="section-title">Наша философия</h2>
+            <div class="philosophy-text">
+                <p>Мы верим, что истинное могущество России — в ее людях. В здоровых, образованных, уверенных в завтрашнем дне гражданах. Мы не строим империю — мы строим Дом. Дом, где тепло, безопасно и уютно каждой семье, где лечат и учат лучше всех в мире.</p>
+                <p>Наш выбор прост: либо мы продолжаем тратить наши общие ресурсы на гонку вооружений и конфронтацию, либо инвестируем их в наше здоровье, в знания наших детей, в наших врачей и учителей, в наше с вами будущее.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Banner 3 -->
+    <div class="container">
+        <div class="image-banner banner-3">
+            <div class="banner-fallback" id="banner3-fallback">
+                <i class="fas fa-leaf"></i>
+                <h3>Экология и устойчивое развитие</h3>
+                <p>Чистая страна для будущих поколений</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Присоединяйтесь к нам!</h2>
+            <p class="cta-subtitle">Голосуйте за «Стратегию благополучия» на выборах 2025 года. Голосуйте за Контракт с Будущим. Голосуйте за достойную жизнь!</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary" id="supportBtn">
+                    <i class="fas fa-heart"></i> Поддержать программу
+                </a>
+                <a href="https://t.me/prosperity_strategy" target="_blank" class="btn btn-secondary">
+                    <i class="fab fa-telegram"></i> Telegram-канал
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-text">Стратегия благополучия</div>
+                    <p>Политическая партия, представляющая интересы граждан и стремящаяся к построению общества, где благополучие каждого — основа силы государства.</p>
+                    <p style="margin-top: 15px; font-style: italic;">Наши цели — ваши потребности!</p>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Связь с нами</h3>
+                    <div class="contact-item">
+                        <i class="fab fa-telegram contact-icon"></i>
+                        <span>Официальный канал: 
+                            <a href="https://t.me/prosperity_strategy" target="_blank" style="color: var(--accent-blue); text-decoration: none;">
+                                @prosperity_strategy
+                            </a>
+                        </span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-users contact-icon"></i>
+                        <span>Для волонтёров и активистов</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-calendar-alt contact-icon"></i>
+                        <span>Выборы 2025 года</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2025 Политическая партия «Стратегия благополучия». Все права защищены.</p>
+                <p style="margin-top: 10px;">Сайт создан для предвыборной кампании 2025 года.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mainNav').classList.toggle('active');
+            this.innerHTML = document.getElementById('mainNav').classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a, .btn-secondary').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Close mobile menu after click
+                        if (window.innerWidth <= 768) {
+                            document.getElementById('mainNav').classList.remove('active');
+                            document.getElementById('mobileMenuBtn').innerHTML = '<i class="fas fa-bars"></i>';
+                        }
+                    }
+                }
+            });
+        });
+
+        // Support button functionality
+        document.getElementById('supportBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Спасибо за поддержку программы партии «Стратегия благополучия»! Ваш голос важен для будущего нашей страны. Подпишитесь на наш Telegram-канал для участия в кампании.');
+        });
+
+        // Add animation to timeline items on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Set initial state for animation
+        document.querySelectorAll('.timeline-content').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(item);
+        });
+
+        // Check if banner images loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check each banner image
+            const banners = document.querySelectorAll('.image-banner');
+            banners.forEach((banner, index) => {
+                const img = new Image();
+                img.src = banner.style.backgroundImage.replace(/url\(['"]?(.*?)['"]?\)/i, '$1');
+                
+                img.onerror = function() {
+                    // If image fails to load, show fallback
+                    const fallbackId = `banner${index + 1}-fallback`;
+                    const fallback = document.getElementById(fallbackId);
+                    if (fallback) {
+                        fallback.style.display = 'flex';
+                    }
+                };
+                
+                img.onload = function() {
+                    // If image loads, hide fallback
+                    const fallbackId = `banner${index + 1}-fallback`;
+                    const fallback = document.getElementById(fallbackId);
+                    if (fallback) {
+                        fallback.style.display = 'none';
+                    }
+                };
+            });
+            
+            // Add current year to manifesto
+            const manifestoIntro = document.querySelector('.manifesto-text .intro').nextElementSibling;
+            if (manifestoIntro) {
+                manifestoIntro.innerHTML = manifestoIntro.innerHTML.replace('2025 году, ', '<strong>2025 году</strong>, ');
+            }
+            
+            // Add click tracking for Telegram link
+            document.querySelectorAll('a[href*="t.me"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    console.log('Переход в Telegram канал: prosperity_strategy');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
